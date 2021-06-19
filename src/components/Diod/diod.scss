@@ -1,0 +1,42 @@
+.led {
+  margin-bottom: 15px;
+  text-align: center;
+  border: 2px solid #0c93f8;
+  border-radius: 10px;
+  background: #999bad;
+
+  & > h4 {
+    margin: 0;
+    font-size: 16px;
+    text-align: center;
+    color: #fff;
+    background-color: #0c93f8;
+    border-radius: 6px;
+    font-size: 18px;
+  }
+
+  & > button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 15px;
+    width: 150px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    background-color: #0176ff;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 30px blue;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      background-color: #5f92ff;
+    }
+
+    &:active {
+      background-color: #0653fa;
+      outline: none;
+    }
+  }
+}

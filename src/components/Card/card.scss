@@ -1,0 +1,14 @@
+.modules__item {
+  margin-bottom: 15px;
+  border: 2px solid #0c93f8;
+  border-radius: 10px;
+  background: #73bbfe;
+
+  & > h4 {
+    margin: 0;
+    text-align: center;
+    color: #fff;
+    background-color: #0c93f8;
+    border-radius: 6px;
+  }
+}
