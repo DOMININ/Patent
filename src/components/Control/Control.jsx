@@ -10,7 +10,7 @@ const Control = () => {
   const [isTakedOff, setIsTakedOff] = useState(false);
   const [isStreamOn, setIsStreamOn] = useState(false);
   const [activeCommand, setActiveCommand] = useState('');
-  const [lang, setLang] = useState('RU');
+  const [lang, setLang] = useState(localStorage.getItem('lang'));
   const canvasElement = useRef(null);
 
   useEffect(() => {
@@ -77,10 +77,11 @@ const Control = () => {
   };
 
   const onLangChange = (event) => {
-    setLang(event.target.value);
+    localStorage.setItem('lang', event.target.value);
+    setLang(localStorage.getItem('lang'));
   };
 
-  if (lang === 'RU') {
+  if (localStorage.getItem('lang') === 'RU') {
     return (
       <section className={styles.control}>
         <div className={styles.wrapper}>
@@ -199,6 +200,19 @@ const Control = () => {
             className={styles.emergency}
           >
             На координаты
+          </button>
+          <button data-control="flip f" onClick={sendButtonCommand} className={styles.emergency}>
+            Переворот вперед
+          </button>
+          <button data-control="flip r" onClick={sendButtonCommand} className={styles.emergency}>
+            Переворот вправо
+          </button>
+          <button
+            data-control="curve 70 70 0 140 0 0 20"
+            onClick={sendButtonCommand}
+            className={styles.emergency}
+          >
+            Полукруг
           </button>
         </div>
         <button className={styles.restart} onClick={restartServer} />
@@ -351,6 +365,19 @@ const Control = () => {
           className={styles.emergency}
         >
           On coord
+        </button>
+        <button data-control="flip f" onClick={sendButtonCommand} className={styles.emergency}>
+          Flip f
+        </button>
+        <button data-control="flip r" onClick={sendButtonCommand} className={styles.emergency}>
+          Flip r
+        </button>
+        <button
+          data-control="curve 70 70 0 140 0 0 20"
+          onClick={sendButtonCommand}
+          className={styles.emergency}
+        >
+          Semicircle
         </button>
       </div>
       <button className={styles.restart} onClick={restartServer} />

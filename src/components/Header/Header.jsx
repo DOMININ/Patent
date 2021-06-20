@@ -12,7 +12,6 @@ const Header = () => {
           activeStyle={{
             fontWeight: 'bold',
             color: '#0c93f8',
-            borderBottom: '2px solid #061d3a',
           }}
         >
           Ардуино
@@ -23,8 +22,7 @@ const Header = () => {
           to="/drone"
           activeStyle={{
             fontWeight: 'bold',
-            color: '##0c93f8',
-            borderBottom: '2px solid #061d3a',
+            color: '#0c93f8',
           }}
         >
           Дрон

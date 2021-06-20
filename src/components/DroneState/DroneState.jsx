@@ -25,7 +25,6 @@ const useSocket = () => {
 const DroneState = ({ lang }) => {
   const status = useSocket();
   const droneState = useDroneState([]);
-  console.log(lang);
 
   if (lang === 'RU') {
     return (

@@ -1,6 +1,6 @@
 .control {
   position: relative;
-  height: calc(100vh - 20px);
+  height: calc(100vh - 60px);
   padding: 10px;
   padding-bottom: 0;
   display: flex;
@@ -136,12 +136,9 @@
   display: flex;
 }
 
-.btnAdvanced {
-}
-
 .emergency {
   margin-top: 10px;
-  width: 100%;
+  width: 280px;
   color: red;
   border: 2px solid red;
   background: black;
@@ -164,7 +161,7 @@
 
 .panelList {
   position: absolute;
-  top: 20px;
+  top: -41px;
   left: 20px;
   display: flex;
   justify-content: center;
@@ -214,4 +211,9 @@
   background: #ed462f;
   border-color: #ed462f;
   color: #fff;
+}
+
+.btnAdvanced {
+  display: flex;
+  justify-content: space-between;
 }

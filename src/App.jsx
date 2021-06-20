@@ -12,10 +12,10 @@ const App = () => {
 
       <Switch>
         <Redirect exact from="/" to="/arduino" />
-        <Route path="/arduino">
+        <Route exact path="/arduino">
           <ArduinoMain />
         </Route>
-        <Route path="/drone">
+        <Route exact path="/drone">
           <DroneMain />
         </Route>
       </Switch>

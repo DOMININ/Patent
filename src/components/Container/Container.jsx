@@ -4,7 +4,12 @@ import { Droppable } from 'react-beautiful-dnd';
 import './container.scss';
 
 const Container = (props) => {
-  const title = props.item.title === 'Arduino' ? 'Ардуино' : 'Модули';
+  const title =
+    localStorage.getItem('lang') === 'RU'
+      ? props.item.title === 'Arduino'
+        ? 'Ардуино'
+        : 'Модули'
+      : props.item.title;
 
   return (
     <div className="containers__item">

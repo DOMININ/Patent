@@ -3,10 +3,16 @@ import { Draggable } from 'react-beautiful-dnd';
 import './card.scss';
 
 const Card = (props) => {
-  const lang = {
+  const langRU = {
     Sonar: 'Датчик дальности',
     Servo: 'Сервомотор',
     Diod: 'Светодиод',
+  };
+
+  const langEN = {
+    Sonar: 'Sonar',
+    Servo: 'Servo',
+    Diod: 'Diod',
   };
 
   return (
@@ -21,7 +27,7 @@ const Card = (props) => {
               key={index}
               className="modules__item"
             >
-              <h4>{lang[item]}</h4>
+              <h4>{localStorage.getItem('lang') === 'RU' ? langRU[item] : langEN[item]}</h4>
               <img src={`img/${item}.png`} width="100" height="100" alt={item} />
             </li>
           )}
